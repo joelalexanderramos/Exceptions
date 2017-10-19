@@ -1,0 +1,10 @@
+﻿@model IEnumerable<Northwind2.Models.Category>
+
+
+@foreach(var item in Model)
+{
+    <h3>@item.CategoryName</h3>
+    <img src="@Url.Action("GetImage", "Category", new { id = item.CategoryID}) "/>
+    @Html.ActionLink("Display", "Display", new { id = item.CategoryID})
+    <hr />
+}

@@ -1,0 +1,21 @@
+﻿@model Northwind2.Models.Category
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@Model.CategoryName</title>
+</head>
+<body>
+    <div> 
+        <h2>@Model.CategoryName</h2>
+        <img src="@Url.Action("GetImage", "Category", new { id = Model.CategoryID })" />
+        <p>@Html.DisplayFor(p=>p.Description)</p>
+    </div>
+</body>
+</html>
